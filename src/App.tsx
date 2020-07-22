@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import './App.css';
-import SearchBar from './Components/SearchBarComponent/SearchBar';
 import MediaGrid from './Components/MediaGridComponent/MediaGrid';
+import SearchBar from './Components/SearchBarComponent/SearchBar';
 import { IUserInput } from './Common/Interfaces';
 import {createMuiTheme, MuiThemeProvider} from '@material-ui/core';
 
@@ -29,8 +29,8 @@ function App() {
   return (
     <div className="App">
        <MuiThemeProvider theme={theme}>
-      <SearchBar SetUserInput={SetUserInput}/>
-      <MediaGrid SearchQuery={UserInput.SearchQuery} StartDate={UserInput.StartDate} EndDate={UserInput.EndDate}/>
+       <SearchBar SetUserInput={SetUserInput}/>
+       <MediaGrid SearchQuery={UserInput.SearchQuery} StartDate={UserInput.StartDate} EndDate={UserInput.EndDate}/>
       </MuiThemeProvider>
     </div>
   );

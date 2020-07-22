@@ -26,6 +26,7 @@ function MediaGrid(props: IMediaGridProps) {
             );
 
     }, [props.SearchQuery, props.EndDate, props.StartDate]);
+
     var Cards: JSX.Element[] = [];
     ItemArray.forEach((el: IState, i: Number) => {
         if (!el || !el.links[0] || !el.data) {
@@ -36,9 +37,10 @@ function MediaGrid(props: IMediaGridProps) {
                 <MediaCard ImageUrl={el['links'][0]['href']} Description={el["data"][0]['description']} />
             </Grid>)
     })
+
     return (
         <div>
-             <Grid container spacing={3} className="MediaGridContainer">
+            <Grid container spacing={3} className="MediaGridContainer">
                 {Cards}
             </Grid>
         </div>
