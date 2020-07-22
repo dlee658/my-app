@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MediaCard from '../MediaCardComponent/MediaCard';
 import { Grid } from '@material-ui/core';
 import './MediaGrid.css';
+import { IUserInput } from '../../Common/Interfaces'
 
 interface IState {
     links: any[];
